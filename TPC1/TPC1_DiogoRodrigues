@@ -1,0 +1,46 @@
+filename = '../../TPC1/CHI Bilingual Medical Glossary R«English-Spanish.txt'
+
+file = open(filename)
+
+text = file.read()
+
+#Tirar toda a pontuacao
+text = text.replace('.', ' ')
+text = text.replace(',', ' ')
+text = text.replace('-', ' ')
+
+
+
+def anagrams (string1, string2):
+    str1 = string1.split().lower()
+    str2 = string2.split().lower()
+    sorted_str1 = sorted(''.join(str1))
+    sorted_str2 = sorted(''.join(str2))
+    return sorted (sorted_str1) == sorted(sorted_str2)
+
+#dividir o texto em tokens 
+anagramas = {}
+t_split = text.split()
+tokens = t_split.lower()
+
+
+def verificarAnagrama(tokens):
+
+  areAnagrams = []
+  token_counts = {}
+  for token in tokens:
+    token_counts[token] = sorted(list(token))
+  
+  for i in range(len(tokens)):
+    for j in range(i + 1, len(tokens)):
+      # Verifica se os tokens têm o mesmo conjunto de caracteres.
+      if token_counts[tokens[i]] == token_counts[tokens[j]]:
+        # Verifica se a ordem das palavras é importante.
+        if not considerar_ordem_palavras:
+          areAnagrams.append((tokens[i], tokens[j]))
+        else:
+          # Verifica se os tokens são iguais.
+          if tokens[i] == tokens[j]:
+            areAnagrams.append((tokens[i], tokens[j]))
+
+  return areAnagrams
