@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Futebol Clube do Porto</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: white;
+    }
+    h1, h2 {
+      font-family: Arial, sans-serif;
+      color: #0053A0;
+      text-align: center; /* Centraliza os títulos */
+    }
+    p {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #0053A0;
+      text-align: justify;
+      margin-left: auto; /* Centraliza o texto */
+      margin-right: auto;
+    }
+    img.porto-logo {
+      width: 20%;
+      position: fixed;
+      top: 20px; /* Ajusta a posição vertical */
+      left: 10px; /* Ajusta a posição horizontal */
+    }
+    .conteudo {
+      width: 60%; /* Utiliza 60% do espaço restante para o conteúdo */
+      margin-left: 30%; /* Define a margem esquerda para 30% */
+      text-align: left;
+    }
+    .linha-vertical {
+      position: fixed;
+      top: 0;
+      left: 20%;
+      height: 100%;
+      width: 2px; /* Largura da linha vertical */
+      background-color: #0053A0; /* Cor da linha vertical */
+    }
+    .menu-lateral {
+      position: fixed;
+      top: 240px; /* Ajuste para descer mais os botões */
+      left: 40px; /* Ajuste para a direita */
+      width: 15%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .menu-lateral a {
+      display: block;
+      margin-bottom: 15px; /* Aumenta o espaço entre os botões */
+      padding: 15px 20px; /* Aumenta o padding vertical */
+      color: #0053A0;
+      text-decoration: none;
+      border: 2px solid #87CEEB; /* Cor azul clara */
+      border-radius: 15px; /* Borda com as pontas curvas */
+    }
+    img.centralizado {
+      display: block;
+      margin: 0 auto; /* Centraliza as imagens */
+    }
+
+    /* Estilos para os botões dos jogadores */
+    .linha-1, .linha-2, .linha-3 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Quatro colunas para 4 botões */
+      gap: 10px; /* Espaço entre os botões */
+
+      /* Centraliza os botões */
+      justify-items: center;
+      align-items: center; /* Alinha verticalmente ao centro (opcional) */
+      justify-content: center; /* Distribui uniformemente (opcional) */
+      margin-top: 20px;
+    }
+
+    .linha-4 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Duas colunas para 2 botões */
+      gap: 10px; /* Espaço entre os botões */
+
+      /* Centraliza os botões */
+      justify-items: center;
+      align-items: center; /* Alinha verticalmente ao centro (opcional) */
+      justify-content: center; /* Distribui uniformemente (opcional) */
+      margin-top: 20px;
+    }
+
+    .jogadores button {
+      width: 20%; /* Largura dos botões */
+      font-weight: bold;
+      margin: 0 auto; /* Centraliza verticalmente (opcional) */
+    }
+
+    .linha-5 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Três colunas para 3 botões */
+      gap: 10px; /* Espaço entre os botões */
+
+      /* Centraliza os botões */
+      justify-items: center;
+      align-items: center; /* Alinha verticalmente ao centro (opcional) */
+      justify-content: center; /* Distribui uniformemente (opcional) */
+      margin-top: 20px;
+    }
+
+    .equipa-tecnica button {
+      width: 30%; /* Largura dos botões */
+      font-weight: bold;
+      margin: 0 auto; /* Centraliza verticalmente (opcional) */
+    }
+  </style>
+</head>
+<body>
+  <img src="Porto-logo.png" alt="Logo do FC Porto" class="porto-logo">
+  <div class="menu-lateral">
+    <a href="#quem-somos">Quem Somos</a>
+    <a href="#palmares">Palmarés</a>
+    <a href="#plantel">Plantel</a>
+    <a href="#classificacao">Classificação</a>
+    <a href="#equipa-tecnica">Equipa Técnica</a>
+  </div>
+  <div class="conteudo" id="conteudo">
+    
+    <br><br><br>
+    <h1 id="quem-somos">
+      Futebol Clube do Porto
+    </h1>
+    
+    <p>
+      O FC Porto, uma das instituições desportivas mais veneradas de Portugal, traz consigo uma rica história de sucesso e paixão pelo futebol. Fundado em 1893, o clube floresceu ao longo dos anos, conquistando inúmeras vitórias e admiradores ao redor do mundo. Com uma trajetória marcada por uma devoção inabalável aos valores do desporto, mais propriamente do futebol e à excelência, o FC Porto é um verdadeiro ícone. Jogadores, treinadores e adeptos compartilham um compromisso igualável com a determinação, a coragem e a busca incessante pela vitória.
+    </p>
+    <br><br><br>
+    <h2 id="palmares">
+      Palmarés
+    </h2>
+    
+    <img src="palmares.png" alt="Palmarés do FC Porto" style="width: 70%;" class="centralizado">
+    <br><br><br>
+    <h2 id="plantel">
+      Plantel Titular Atual
+    </h2>
+    
+    <div class="linha-1 jogadores">
+        <button data-nacionalidade="Brasileiro" data-idade="24 anos" data-clubes-passados="Grêmio" data-salario-anual="€2 milhões" data-contrato-ate="2025" data-clausula="€50 milhões" data-valor="€10 milhões">Galeno</button>
+        <button data-nacionalidade="Brasileiro" data-idade="23 anos" data-clubes-passados="Fluminense" data-salario-anual="€1.5 milhões" data-contrato-ate="2024" data-clausula="€40 milhões" data-valor="€8 milhões">Evanilson</button>
+        <button data-nacionalidade="Português" data-idade="21 anos" data-clubes-passados="Benfica" data-salario-anual="€1.2 milhões" data-contrato-ate="2026" data-clausula="€30 milhões" data-valor="€6 milhões">Francisco Conceição</button>
+    </div>
+    
+    <div class="linha-2 jogadores">
+        <button data-nacionalidade="Espanhol" data-idade="24 anos" data-clubes-passados="Stuttgart" data-salario-anual="€1.8 milhões" data-contrato-ate="2023" data-clausula="€45 milhões" data-valor="€9 milhões">Nico Gonzalez</button>
+        <button data-nacionalidade="Argentino" data-idade="19 anos" data-clubes-passados="Vélez Sársfield" data-salario-anual="€1.3 milhões" data-contrato-ate="2025" data-clausula="€35 milhões" data-valor="€7 milhões">Alan Varela</button>
+        <button data-nacionalidade="Brasileiro" data-idade="24 anos" data-clubes-passados="Grêmio" data-salario-anual="€2.2 milhões" data-contrato-ate="2024" data-clausula="€55 milhões" data-valor="€11 milhões">Pepê</button>
+    </div>
+    
+    <div class="linha-3 jogadores">
+        <button data-nacionalidade="Brasileiro" data-idade="23 anos" data-clubes-passados="Sporting" data-salario-anual="€2.3 milhões" data-contrato-ate="2023" data-clausula="€60 milhões" data-valor="€12 milhões">Wendel</button>
+        <button data-nacionalidade="Brasileiro" data-idade="27 anos" data-clubes-passados="Porto" data-salario-anual="€3 milhões" data-contrato-ate="2024" data-clausula="€65 milhões" data-valor="€13 milhões">Otávio</button>
+        <button data-nacionalidade="Português" data-idade="38 anos" data-clubes-passados="Real Madrid" data-salario-anual="€1.5 milhões" data-contrato-ate="2022" data-clausula="€20 milhões" data-valor="€4 milhões">Pepe</button>
+        <button data-nacionalidade="Português" data-idade="29 anos" data-clubes-passados="Sporting" data-salario-anual="€2.8 milhões" data-contrato-ate="2024" data-clausula="€25 milhões" data-valor="€5 milhões">João Mário</button>
+    </div>
+    
+    <div class="linha-4 jogadores">
+        <button data-nacionalidade="Português" data-idade="22 anos" data-clubes-passados="Académica" data-salario-anual="€1.1 milhões" data-contrato-ate="2025" data-clausula="€15 milhões" data-valor="€3 milhões">Diogo Costa</button>
+    </div>
+    <br><br><br>
+    <h2 id="classificacao">
+      Classificação Atual na Liga Portuguesa
+    </h2>
+    
+    <img src="classificacao.png" alt="Classificação Atual" style="width: auto; height: 50%;" class="centralizado">
+    <br><br><br>
+    <h2 id="equipa-tecnica">
+      Equipa Técnica
+    </h2>
+    
+    <div class="linha-5 equipa-tecnica">
+        <button data-cargo="Treinador" data-nome="Sérgio Conceição" data-salario-anual="€4 milhões" data-contrato-ate="2023" data-temporadas="5">Sérgio Conceição</button>
+        <button data-cargo="Treinador Adjunto" data-nome="Vítor Bruno" data-salario-anual="€1.5 milhões" data-contrato-ate="2023" data-temporadas="4">Vítor Bruno</button>
+        <button data-cargo="Treinador de Guarda-Redes" data-nome="João Costa" data-salario-anual="€1.2 milhões" data-contrato-ate="2023" data-temporadas="6">João Costa</button>
+        <button data-cargo="Preparador Físico" data-nome="Pedro Pinho" data-salario-anual="€1.8 milhões" data-contrato-ate="2023" data-temporadas="3">Pedro Pinho</button>
+        <button data-cargo="Fisioterapeuta" data-nome="Rui Barros" data-salario-anual="€1.3 milhões" data-contrato-ate="2023" data-temporadas="4">Rui Barros</button>
+        <button data-cargo="Diretor Desportivo" data-nome="Luis Gonçalves" data-salario-anual="€2.5 milhões" data-contrato-ate="2023" data-temporadas="5">Luis Gonçalves</button>
+    </div>
+  </div>
+  <div class="linha-vertical"></div>
+
+  <script>
+    const botoesJogadores = document.querySelectorAll('.jogadores button');
+    botoesJogadores.forEach(botao => {
+      botao.addEventListener('click', () => {
+        const nacionalidade = botao.getAttribute('data-nacionalidade');
+        const idade = botao.getAttribute('data-idade');
+        const clubesPassados = botao.getAttribute('data-clubes-passados');
+        const salarioAnual = botao.getAttribute('data-salario-anual');
+        const contratoAte = botao.getAttribute('data-contrato-ate');
+        const clausula = botao.getAttribute('data-clausula');
+        const valor = botao.getAttribute('data-valor');
+        alert(`Nome: ${botao.textContent}\nNacionalidade: ${nacionalidade}\nIdade: ${idade}\nClubes Passados: ${clubesPassados}\nSalário Anual: ${salarioAnual}\nContrato até: ${contratoAte}\nClausula de Rescisão: ${clausula}\nValor de Compra: ${valor}`);
+      });
+    });
+
+    const botoesEquipeTecnica = document.querySelectorAll('.equipa-tecnica button');
+    botoesEquipeTecnica.forEach(botao => {
+      botao.addEventListener('click', () => {
+        const cargo = botao.getAttribute('data-cargo');
+        const nome = botao.getAttribute('data-nome');
+        const salarioAnual = botao.getAttribute('data-salario-anual');
+        const contratoAte = botao.getAttribute('data-contrato-ate');
+        const temporadas = botao.getAttribute('data-temporadas');
+        alert(`Cargo: ${cargo}\nNome: ${nome}\nSalário Anual: ${salarioAnual}\nContrato até: ${contratoAte}\nTemporadas: ${temporadas}`);
+      });
+    });
+  </script>
+</body>
+</html>
