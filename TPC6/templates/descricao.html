@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card mt-4">
+                    <div class="card-header bg-secondary text-white">
+                        <h2 class="text-center">Conceito - {{ designacao }}</h2>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Português:</h4>
+                        <p class="card-text">{{ desig_pt }}</p>
+                        <hr>
+                        <h4 class="card-title">Inglês:</h4>
+                        <p class="card-text">{{ desig_en }}</p>
+                        {% if desig_fr %}
+                            <hr>
+                            <h4 class="card-title">Francês:</h4>
+                            <p class="card-text">{{ desig_fr }}</p>
+                        {% endif %}
+                        {% if desig_es %}
+                            <hr>
+                            <h4 class="card-title">Espanhol:</h4>
+                            <p class="card-text">{{ desig_es }}</p>
+                        {% endif %}
+                        {% if desig_de %}
+                            <hr>
+                            <h4 class="card-title">Alemão:</h4>
+                            <p class="card-text">{{ desig_de }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="/conceitos" class="btn btn-outline-dark">Retroceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="list-group">
+  {% for conceito in conceitos %}
+    <a href="{{ url_for('consultar_conceitos', designacao=conceito) }}" class="list-group-item list-group-item-action">{{ conceito }}</a>
+  {% endfor %}
+</div>
+
+<script>
+  function filterWords(words, prefix) {
+    const trie = new Trie();
+    words.forEach(word => trie.insert(word));
+
+    const filteredWords = [];
+    for (let word of words) {
+      if (trie.startsWith(prefix)) {
+        filteredWords.push(word);
+      }
+    }
+    return filteredWords;
+  }
+
+  function updateWordsList(words) {
+    const wordsList = document.querySelector('.list-group');
+    wordsList.innerHTML = '';
+    words.forEach(word => {
+      const listItem = document.createElement('a');
+      listItem.href = "{{ url_for('consultar_conceitos', designacao=word) }}";
+      listItem.classList.add('list-group-item', 'list-group-item-action');
+      listItem.textContent = word;
+      wordsList.appendChild(listItem);
+    });
+  }
+</script>
+
+{% endblock %}
